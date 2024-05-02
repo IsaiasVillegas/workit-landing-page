@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wavy::after {
+  content: "";
+  @apply absolute bg-dark-purple w-full top-0 left-0 -z-10;
+  clip-path: ellipse(144% 60% at 50% 40%);
+}
+
+@media (min-width: 768px) {
+  .wavy::after {
+    clip-path: ellipse(110% 60% at 50% 40%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wavy::after {
+    height: 730px;
+    clip-path: ellipse(93% 60% at 50% 40%);
+  }
+}
